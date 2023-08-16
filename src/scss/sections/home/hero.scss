@@ -5,6 +5,10 @@
 		padding: 120px 0 60px;
 	}
 
+	@media all and (min-width: $xl) {
+		padding: 70px 0 60px;
+	}
+
 	.container {
 		padding: 0;
 
@@ -36,7 +40,7 @@
 			&::before {
 				content: "";
 				display: block;
-				height: 50px;
+				height: 100px;
 				width: 100%;
 				background-color: #fff;
 				position: absolute;
@@ -133,6 +137,12 @@
 
 		@media all and (min-width: $lg) {
 			display: block;
+		}
+
+		@media all and (min-width: $xl) {
+			display: block;
+			top: 62px;
+			left: -30px;
 		}
 	}
 
