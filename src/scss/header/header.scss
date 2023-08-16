@@ -1,19 +1,117 @@
 .header {
-	padding: 30px 0;
+	padding: 24px 0;
+	position: fixed;
+	width: 100vw;
+	left: 0;
+	top: 0;
+	z-index: 100;
+
+	@media all and (min-width: $md) {
+		padding: 30px 0;
+	}
 
 	&__wrapper {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
+
+		&.opened {
+			.header__nav {
+				display: flex;
+				position: absolute;
+				top: 91px;
+				left: 0;
+				max-width: 100%;
+				flex-direction: column;
+				padding: 20px 12px;
+				background-color: $white;
+				border-top: 1px solid #D5DADD;
+				border-bottom: 1px solid #D5DADD;
+				animation: fade1 $tr forwards linear;
+
+				@keyframes fade1 {
+					0% {
+						display: none;
+						opacity: 0;
+						transform: translateY(100%);
+					}
+
+					100% {
+						display: flex;
+						opacity: 1;
+						transform: translateY(0);
+					}
+				}
+			}
+
+			.nav__list {
+				width: 100%;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			.list__item {
+				margin-right: 0;
+				margin-bottom: 20px;
+			}
+
+			.list__link {
+				color: $text;
+				transition: opacity ease $tr;
+
+				&:hover {
+					opacity: $op;
+				}
+			}
+
+			.button {
+				width: 100%;
+			}
+
+			.burger__button {
+				span {
+					top: 50%;
+					transform: rotate(45deg) translateY(-50%);
+
+					&::after {
+						top: 0;
+						transform: rotate(-90deg);
+					}
+				}
+			}
+		}
+
+		&.closed {
+			.header__nav {
+				animation: fade $tr forwards ease;
+			
+				@keyframes fade {
+					0% {
+						opacity: 1;
+						transform: translateY(0);
+					}
+	
+					100% {
+						opacity: 0;
+						transform: translateY(-100%);
+					}
+				}
+			}
+		}
 	}
 
 	&__logo {
 		font-family: $ff;
-		font-size: 24px;
+		font-size: 20px;
 		font-style: normal;
 		font-weight: $fw-bold;
-		line-height: 120%; 
+		line-height: 120%;
 		color: $text;
 		transition: opacity ease $tr;
+
+		@media all and (min-width: $md) {
+			font-size: 24px;
+		}
 
 		&:hover {
 			opacity: $op;
@@ -21,12 +119,16 @@
 	}
 
 	&__nav {
+		display: none;
 		margin-left: auto;
-		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		width: 100%;
 		max-width: 634px;
+
+		@media all and (min-width: $md) {
+			display: flex;
+		}
 	}
 
 	.nav__list {
@@ -44,10 +146,14 @@
 	.list__link {
 		color: $link;
 		font-family: $ff;
-		font-size: 18px;
+		font-size: 16px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 120%;
+
+		@media all and (min-width: $md) {
+			font-size: 18px;
+		}
 
 		&:hover {
 			color: $text;
