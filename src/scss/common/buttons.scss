@@ -1,0 +1,25 @@
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: $ff;
+	color: $white;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: $fw-bold;
+	line-height: 120%;
+	border-radius: $bord8;
+	border: 0;
+	padding: 19px 39px;
+	background-color: $black;
+	border-style: none;
+	cursor: pointer;
+	border: 1px solid $black;
+	transition: background-color ease $tr,
+			color ease $tr;
+
+	&:hover {
+		background-color: $white;
+		color: $text;
+	}
+}

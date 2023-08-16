@@ -1,0 +1,56 @@
+.header {
+	padding: 30px 0;
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		font-family: $ff;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: $fw-bold;
+		line-height: 120%; 
+		color: $text;
+		transition: opacity ease $tr;
+
+		&:hover {
+			opacity: $op;
+		}
+	}
+
+	&__nav {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		max-width: 634px;
+	}
+
+	.nav__list {
+		display: flex;
+	}
+
+	.list__item {
+		margin-right: 40px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.list__link {
+		color: $link;
+		font-family: $ff;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 120%;
+
+		&:hover {
+			color: $text;
+		}
+	}
+}

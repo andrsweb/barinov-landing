@@ -9,10 +9,10 @@ $xxl: 1366px;
 // Container max-width.
 $container-md: 760px;
 $container-lg: 990px;
-$container-xl: 1200px;
+$container-xl: 1336px;
 
 // Container padding.
-$container-padding: 24px;
+$container-padding: 20px;
 
 // Font families.
 $ff			: '	Onest', sans-serif;
@@ -37,14 +37,16 @@ $lh-title	: 1.3;
 
 // Colors.
 $white	: #FFFFFF;
-$black	: #000000;
+$black	: #0A0F16;
 $text	: #202324;
 $grey	: #DDE3ED;
 $light	: #F7F7F7;
 $footer : #0A0F16;
 $beige  : #F4F0ED;
 $peach  : #FBE4D7;
+$link   : #696E72;
 
 // Others.
 $tr: 0.35s;
 $op: 0.75;
+$bord8 : 8px;
