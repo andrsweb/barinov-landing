@@ -2,7 +2,7 @@
 	padding: 120px 0 60px;
 
 	.h1 {
-		margin: 42px 0 58px;
+		margin-bottom: 72px;
 	}
 
 	&__wrapper {
@@ -40,6 +40,9 @@
 	}
 
 	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 		width: 50%;
 		padding-left: 18px;
 	}
@@ -57,6 +60,10 @@
 	.right__dots {
 		right: 30px;
 		bottom: -33px;
+	}
+
+	.online__course {
+		margin-bottom: 32px;
 	}
 }
 
