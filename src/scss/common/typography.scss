@@ -10,15 +10,23 @@ h4, .h4 {
 
 h1, .h1 {
 	font-family: $ff;
-	font-size: 64px;
+	font-size: 40px;
 	font-style: normal;
 	font-weight: $fw-bold;
 	color: $text;
 	line-height: 120%;
-	max-width: 620px;
+	text-align: center;
+	width: 100%;
+	max-width: 100%;
 
-	@media all and (min-width: $lg) {
-		font-size: 64px
+	@media all and (min-width: $md) {
+		font-size: 64px;
+		
+	}
+
+	@media all and (min-width: $xl) {
+		text-align: left;
+		max-width: 620px;
 	}
 }
 

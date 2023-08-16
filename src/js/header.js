@@ -42,7 +42,7 @@ const toogleBurgerMenu = () => {
 
 	window.addEventListener('resize', () => {        //Resize function, if window width >= 768, remove all active classes on burger menu and button
 		const windowWidth = window.innerWidth
-		const WINDOW_WIDTH_MD = 768
+		const WINDOW_WIDTH_MD = 1200
 
 		if (windowWidth >= WINDOW_WIDTH_MD && headerWrapper.classList.contains('opened')) {
 			headerWrapper.classList.remove('opened')

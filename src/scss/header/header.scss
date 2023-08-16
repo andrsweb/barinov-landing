@@ -37,9 +37,9 @@
 				align-items: flex-start;
 				padding: 20px 12px;
 				background-color: $white;
-				border-top: 1px solid #D5DADD;
-				border-bottom: 1px solid #D5DADD;
 				animation: fade1 $tr forwards linear;
+				border-bottom: 1px solid #D5DADD;
+					border-top: 1px solid #D5DADD;
 
 				@keyframes fade1 {
 					0% {
@@ -54,17 +54,37 @@
 						transform: translateY(0);
 					}
 				}
+
+				@media all and (min-width: $md) {
+					padding: 30px 40px 30px 40px;
+					border-top: 0;
+
+					&::before {
+						content: "";
+						display: block;
+						width: 100%;
+						position: absolute;
+						top: 30px;
+						left: 0;
+							border-top: 1px solid #D5DADD;
+					}
+				}
 			}
 
 			.nav__list {
 				width: 100%;
 				flex-direction: column;
 				align-items: flex-start;
+				padding-top: 38px;
 			}
 
 			.list__item {
 				margin-right: 0;
 				margin-bottom: 20px;
+
+				@media all and (min-width: $md) {
+					margin-bottom: 40px;
+				}
 			}
 
 			.list__link {
