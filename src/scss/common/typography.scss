@@ -12,7 +12,7 @@ h1, .h1 {
 	font-family: $ff;
 	font-size: 64px;
 	font-style: normal;
-	font-weight: 700;
+	font-weight: $fw-bold;
 	color: $text;
 	line-height: 120%;
 	max-width: 620px;

@@ -8,6 +8,16 @@
 
 	@media all and (min-width: $md) {
 		padding: 30px 0;
+
+		.container {
+			padding: 0 36px;
+		}
+	}
+
+	@media all and (min-width: $xl) {
+		.container {
+			padding: 0 20px;
+		}
 	}
 
 	&__wrapper {
@@ -23,6 +33,7 @@
 				left: 0;
 				max-width: 100%;
 				flex-direction: column;
+				align-items: flex-start;
 				padding: 20px 12px;
 				background-color: $white;
 				border-top: 1px solid #D5DADD;
@@ -66,6 +77,11 @@
 
 			.button {
 				width: 100%;
+				max-width: 296px;
+
+				@media all and (min-width: $sm) {
+					max-width: 166px;
+				}
 			}
 
 			.burger__button {
@@ -126,7 +142,7 @@
 		width: 100%;
 		max-width: 634px;
 
-		@media all and (min-width: $md) {
+		@media all and (min-width: $xl) {
 			display: flex;
 		}
 	}
@@ -157,6 +173,21 @@
 
 		&:hover {
 			color: $text;
+		}
+	}
+
+	.burger__button_wrapper {
+		display: flex;
+		align-items: center;
+
+		.tablet {
+			max-width: 166px;
+		}
+
+		.burger__button {
+			@media all and (min-width: $md) {
+				margin-left: 20px;
+			}
 		}
 	}
 }

@@ -27,6 +27,18 @@
 		font-size: 18px;
 		padding: 19px 39px;
 	}
+
+	&.tablet {
+		display: none;
+
+		@media all and (min-width: $md) {
+			display: flex;
+		}
+
+		@media all and (min-width: $xl) {
+			display: none;
+		}
+	}
 }
 
 .burger__button {
@@ -34,6 +46,10 @@
 	height: 42px;
 	position: relative;
 	cursor: pointer;
+
+	@media all and (min-width: $md) {
+		width: 44px;
+	}
 
 	span {
 		position: absolute;
@@ -59,7 +75,7 @@
 		}
 	}
 
-	@media all and (min-width: $md) {
+	@media all and (min-width: $xl) {
 		display: none;
 	}
 }
