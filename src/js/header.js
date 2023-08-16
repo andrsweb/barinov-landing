@@ -36,6 +36,7 @@ const toogleBurgerMenu = () => {
 		} else {
 			headerWrapper.classList.add('closed')
 			setTimeout(() => headerWrapper.classList.remove('opened'), 350);
+			setTimeout(() => headerWrapper.classList.remove('closed'), 350);
 		}
 	})
 
