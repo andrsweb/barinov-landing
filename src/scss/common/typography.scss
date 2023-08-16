@@ -31,10 +31,16 @@ h1, .h1 {
 }
 
 h2, .h2 {
-	font-size: 24px;
+	color: $text;
+	text-align: center;
+	font-family: $ff;
+	font-size: 42px;
+	font-style: normal;
+	font-weight: $fw-bold;
+	line-height: 120%;
 
 	@media all and (min-width: $lg) {
-		font-size: 36px
+		font-size: 52px
 	}
 }
 

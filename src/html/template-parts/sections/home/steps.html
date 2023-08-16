@@ -1,0 +1,28 @@
+<section class="steps">
+	<div class="container">
+		<div class="steps__texts">
+			<div class="steps__subtitle">
+				ПОДХОДИТ КАК НОВИЧКАМ, ТАК И ОПЫТНЫМ ТРЕЙДЕРАМ
+			</div>
+			<h2 class="h2">
+				Вы хотите начать работать на финансовых рынках всего за 4 шага?
+			</h2>
+			<p class="steps__subtext">
+				начните действовать, не откладывая
+			</p>
+		</div>
+		<div class="steps__inner">
+			<div class="steps__img">
+				<img src="img/steps/steps.png" width="526" height="680" alt="">
+			</div>
+			<div class="steps__items">
+				@@loop('./step.html', [
+					{'src': 'img/ico/lock.svg', 'num': '1 шаг.', 'title': 'Сегодня', 'text': 'Получите бесплатный онлайн видеокурс'},
+					{'src': 'img/ico/find.svg', 'num': '2 шаг.', 'title': 'Завтра', 'text': 'Просмотрите все занятия курса'},
+					{'src': 'img/ico/case.svg', 'num': '3 шаг.', 'title': 'Через неделю', 'text': 'Приступайте к торговле, с учетом приобретенных знаний'},
+					{'src': 'img/ico/arrow.svg', 'num': '4 шаг.', 'title': 'Через две недели', 'text': 'Получите прибыль и потратьте ее на себя'}
+				])
+			</div>
+		</div>
+	</div>
+</section>
