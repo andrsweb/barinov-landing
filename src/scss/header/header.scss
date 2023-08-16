@@ -6,6 +6,8 @@
 	top: 0;
 	z-index: 100;
 	background-color: $white;
+	transition: padding ease $tr,
+			box-shadow ease $tr;
 
 	@media all and (min-width: $md) {
 		padding: 30px 0;
@@ -19,6 +21,11 @@
 		.container {
 			padding: 0 20px;
 		}
+	}
+
+	&.scrolled {
+		padding: 15px 0;
+		box-shadow: 1px 1px 4px rgba(17, 17, 17, 0.473);
 	}
 
 	&__wrapper {

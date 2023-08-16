@@ -34,12 +34,16 @@ h2, .h2 {
 	color: $text;
 	text-align: center;
 	font-family: $ff;
-	font-size: 42px;
+	font-size: 34px;
 	font-style: normal;
 	font-weight: $fw-bold;
 	line-height: 120%;
 
-	@media all and (min-width: $lg) {
+	@media all and (min-width: $md) {
+		font-size: 42px
+	}
+
+	@media all and (min-width: $xl) {
 		font-size: 52px
 	}
 }
