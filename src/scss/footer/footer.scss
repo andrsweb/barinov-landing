@@ -7,7 +7,7 @@
 	}
 
 	@media all and (min-width: $xl) {
-		padding: 110px 0 30px;
+		padding: 80px 0 30px;
 	}
 
 	&__wrapper {
@@ -20,6 +20,10 @@
 			justify-content: space-between;
 			margin-bottom: 83px;
 		}
+
+		@media all and (min-width: $lg) {
+			justify-content: flex-start;
+		}
 	}
 
 	&__info {
@@ -31,7 +35,7 @@
 		}
 
 		@media all and (min-width: $xl) {
-			margin-right: 134px;
+			margin-right: 220px;
 		}
 	}
 
