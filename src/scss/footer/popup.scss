@@ -1,0 +1,143 @@
+.popup-wrapper {
+	position:fixed;
+	display:none;
+	align-items:center;
+	justify-content:center;
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	z-index: 200;
+	overflow-y: auto;
+	padding: 20px;
+	margin: auto 0;
+	background: rgba(150, 157, 160, 0.50);
+	backdrop-filter: blur(5px); 
+
+	&.showed {
+		display: flex;
+
+		animation: show 1s forwards;
+
+		@keyframes show {
+			0% {
+				display: none;
+				opacity: 0;
+			}
+
+			1% {
+				display: flex;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+
+	&.closed {
+			animation: fade $tr forwards ease;
+		
+			@keyframes fade {
+				0% {
+					opacity: 1;
+					scale: 1;
+				}
+
+				100% {
+					opacity: 0;
+					scale: 0;
+				}
+			}
+		}
+
+	.popup {
+		position: absolute;
+		left: 50%;
+		top: 13%;
+		transform: translateX(-50%);
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 32px 40px 40px 40px;
+		margin: auto;
+		background: #F7F7F7;
+		max-width: 496px;
+		border-radius: 8px;
+
+		@media all and (min-width: $lg) {
+		}
+
+		&__title {
+			color: $text;
+			font-family: Onest;
+			font-size: 28px;
+			font-style: normal;
+			font-weight: $fw-bold;
+			line-height: 120%;
+			text-align: left;
+			width: 100%;
+			margin-bottom: 40px;
+		}
+	}
+
+	form {
+		input {
+			padding: 16px 24px;
+			margin-bottom: 24px;
+
+			&:last-child {
+				margin-bottom: 35px;
+			}
+		}
+	}
+
+	.popup-close {
+		color: var(--3, #969DA0);
+		font-family: Onest;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 120%;
+		margin-left: auto;
+		cursor: pointer;
+		margin-bottom: 9px;
+
+		&:hover {
+			opacity: $op;
+		}
+
+		span {
+			display: block;
+			width: 100%;
+			height: 2px;
+			background: $peach;
+			transform: rotate( 45deg );
+
+			&::before {
+				content: "";
+				display: block;
+				width: 100%;
+				height: 2px;
+				background: $peach;
+				transform: rotate( -90deg );
+			}
+		}
+	}
+
+	.privacy__policy {
+		font-size: 14px;
+	}
+
+	.button__wrapper {
+		display: flex;
+		justify-content: center;
+		margin-top: 10px;
+
+		.button {
+			width: 100%;
+		}
+	}
+}
