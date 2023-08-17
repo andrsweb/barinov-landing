@@ -45,6 +45,7 @@ input, fieldset {
 }
 
 input {
+	width: 100%;
 	padding: 16px 24px;
 	color: #45494B;
 	font-family: $ff;
@@ -67,6 +68,10 @@ input {
 
 	&:focus {
 		border: 1px solid $text
+	}
+
+	@media all and (min-width: $md) {
+		font-size: 18px;
 	}
 }
 
