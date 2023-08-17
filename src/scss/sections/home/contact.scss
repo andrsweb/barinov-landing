@@ -4,7 +4,7 @@
 	z-index: 1;
 
 	@media all and (min-width: $xl) {
-		padding: 70px 0 0;
+		padding: 70px 0 30px;
 
 		&::after {
 			content: "";
@@ -71,8 +71,11 @@
 		padding: 40px 12px;
 		border-radius: $bord8;
 
-		@media all and (min-width: $xl) {
+		@media all and (min-width: $md) {
 			padding: 100px 80px;
+		}
+
+		@media all and (min-width: $xl) {
 			flex-direction: row;
 		}
 	}
@@ -108,6 +111,10 @@
 
 		@media all and (min-width: $md) {
 			width: 281px;
+			margin: 0 auto 32px auto;
+		}
+
+		@media all and (min-width: $xl) {
 			margin: 0 0 32px 0;
 		}
 	}

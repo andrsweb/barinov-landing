@@ -1,40 +1,82 @@
 .footer {
-	padding: 110px 0 30px;
+	padding: 60px 0 30px;
 	background-color: $footer;
+
+	@media all and (min-width: $md) {
+		padding: 60px 0 30px;
+	}
+
+	@media all and (min-width: $xl) {
+		padding: 110px 0 30px;
+	}
 
 	&__wrapper {
 		display: flex;
-		margin-bottom: 83px;
+		flex-direction: column;
+		margin-bottom: 40px;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+			justify-content: space-between;
+			margin-bottom: 83px;
+		}
 	}
 
 	&__info {
-		max-width: 414px;
-		margin-right: 134px;
+		max-width: 296px;
+
+		@media all and (min-width: $md) {
+			max-width: 336px;
+			margin-right: 33px;
+		}
+
+		@media all and (min-width: $xl) {
+			margin-right: 134px;
+		}
 	}
 
 	&__title {
 		color: $white;
 		font-family: $ff;
-		font-size: 18px;
+		font-size: 16px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 120%;
 		margin-bottom: 12px;
+
+		@media all and (min-width: $md) {
+			font-size: 18px;
+		}
 	}
 
 	&__requisites {
 		color: #969DA0;
 		font-family: $ff;
-		font-size: 18px;
+		font-size: 16px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 120%;
+
+		@media all and (min-width: $md) {
+			font-size: 18px;
+		}
 	}
 
 	&__links {
 		display: flex;
+		flex-direction: column;
 		align-items: flex-start;
-		width: 50%;
+		width: 100%;
+		margin-top: 24px;
+
+		@media all and (min-width: $md) {
+			width: 50%;
+			margin-top: 0;
+		}
+
+		@media all and (min-width: $xl) {
+			flex-direction: row;
+		}
 	}
 
 	&__link {
@@ -45,11 +87,21 @@
 		margin-right: 24px;
 		color: $white;
 		font-family: $ff;
-		font-size: 18px;
+		font-size: 16px;
 		font-style: normal;
 		font-weight: $fw-bold;
 		line-height: 120%;
 		transition: opacity ease $tr;
+		margin-bottom: 12px;
+
+		@media all and (min-width: $md) {
+			font-size: 18px;
+			margin-bottom: 24px;
+		}
+
+		@media all and (min-width: $xl) {
+			margin-bottom: 0;
+		}
 
 		img {
 			margin-right: 12px;
@@ -57,6 +109,7 @@
 
 		&:last-child {
 			margin-right: 0;
+			margin-bottom: 0;
 		}
 
 		&:hover {
@@ -66,30 +119,47 @@
 	}
 
 	&__rights {
-		margin-top: 80px;
+		margin-top: 40px;
 		padding: 40px 0;
 		display: flex;
+		align-items: center;
+		flex-direction: column;
 		justify-content: space-between;
-		border-top: 1px solid #202324; 
+		border-top: 1px solid #202324;
+
+		@media all and (min-width: $md) {
+			flex-direction: row;
+			margin-top: 80px;
+		}
 	}
 
 	&__license {
 		color: #969DA0;
 		font-family: $ff;
-		font-size: 16px;
+		font-size: 14px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 120%;
+
+		@media all and (min-width: $md) {
+			font-size: 16px;
+		}
 	}
 
 	.privacy__link {
 		color:#FFF;
 		font-family: $ff;
-		font-size: 16px;
+		font-size: 14px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 120%;
 		transition: opacity ease $tr;
+		margin-top: 12px;
+
+		@media all and (min-width: $md) {
+			font-size: 16px;
+			margin-top: 0;
+		}
 
 		&:hover {
 			opacity: 0.8;
