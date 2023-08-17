@@ -1,9 +1,15 @@
 .about {
-	padding: 105px 0;
+	padding: 30px 0;
+
+	@media all and (min-width: $md) {
+		padding: 40px 0;
+	}
+
+	@media all and (min-width: $xl) {
+		padding: 105px 0;
+	}
 
 	.container {
-		padding: 0;
-
 		@media all and (min-width: $md) {
 			padding: 0 36px;
 		}
@@ -21,61 +27,90 @@
 	&__subtitle, &__item {
 		color: #45494B;
 		font-family: $ff;
-		font-size: 18px;
+		font-size: 16px;
 		font-style: normal;
 		font-weight: $fw-regular;
 		line-height: 120%;
+
+		@media all and (min-width: $md) {
+			font-size: 18px;
+		}
 	}
 
 	&__subtitle {
-		margin-bottom: 40px;
+		margin-bottom: 28px;
+
+		@media all and (min-width: $md) {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__item {
 		margin-bottom: 20px;
-		padding-left: 40px;
+		padding-left: 25px;
 		position: relative;
 
 		&::before {
 			content: "";
-			display: block;
+			display: inline-block;
 			position: absolute;
 			left: 0;
 			top: 10px;
-			width: 20px;
+			width: 12px;
 			height: 4px;
 			background-color: #969DA0;
 			border-radius: 4px;
+
+			@media all and (min-width: $md) {
+				width: 20px;
+				height: 4px;
+			}
 		}
 
 		&:last-child {
 			margin-bottom: 0;
 		}
+
+		@media all and (min-width: $md) {
+			padding-left: 40px;
+		}
 	}
 
 	&__income {
-		margin-top: 40px;
-		padding-left: 40px;
+		margin-top: 30px;
 		max-width: 306px;
+
+		@media all and (min-width: $md) {
+			padding-left: 40px;
+			margin-top: 40px;
+		}
 
 		&_title {
 			color: $text;
 			font-family: $ff;
-			font-size: 32px;
+			font-size: 24px;
 			font-style: normal;
 			font-weight: $fw-bold;
 			line-height: 120%;
 			margin-bottom: 4px;
+
+			@media all and (min-width: $md) {
+				font-size: 32px;
+			}
 		}
 
 		&_text {
 			color:#45494B;
 			font-family: $ff;
-			font-size: 18px;
+			font-size: 16px;
 			font-style: normal;
 			font-weight: $fw-regular;
 			line-height: 120%;
 			max-width: 210px;
+
+			@media all and (min-width: $md) {
+				font-size: 18px;
+			} 
 
 			span {
 				font-weight: $fw-bold;
@@ -85,21 +120,43 @@
 
 	&__wrapper {
 		display: flex;
+		flex-direction: column;
 		justify-content: space-between;
+
+		@media all and (min-width: $xl) {
+			flex-direction: row;
+		}
 	}
 
 	&__info {
 		display: flex;
 		flex-direction: column;
-		padding: 40px;
+		padding: 24px;
 		background-color: #F7F7F7;
-		max-width: 636px;
+		border-radius: $bord8;
+
+		@media all and (min-width: $md) {
+			padding: 40px;
+		}
+
+		@media all and (min-width: $xl) {
+			max-width: 636px;
+		}
 	}
 
 	&__img {
+		display: flex;
+		justify-content: center;
 		position: relative;
+		margin-top: 25px;
+
+		@media all and (min-width: $xl) {
+			margin-left: 24px;
+			margin-top: 0;
+		}
 
 		&_desc {
+			display: none;
 			position: absolute;
 			left: 50px;
 			top: 38px;
@@ -115,10 +172,39 @@
 			border-radius: 8px;
 			background-color: rgba(255, 255, 255, 0.70);
 			backdrop-filter: blur(2.5px);
+
+			@media all and (min-width: $xl) {
+				display: block;
+			}
+
+			&.mobile {
+				position: static;
+				display: block;
+				width: 137px;
+				font-size: 14px;
+				padding: 12px 20px;
+				margin-bottom: 20px;
+				margin-top: 10px;
+
+				@media all and (min-width: $md) {
+					font-size: 16px;
+					padding: 16px 24px;
+					width: 159px;
+					margin-top: 0;
+				}
+
+				@media all and (min-width: $xl) {
+					display: none;
+				}
+			}
 		}
 	}
 
 	.button {
-		margin-top: auto;
+		margin-top: 32px;
+
+		@media all and (min-width: $xl) {
+			margin-top: auto;
+		}
 	}
 }
