@@ -1,0 +1,31 @@
+<section class="introduction">
+	<div class="container">
+		<div class="introduction__items">
+			<div class="introduction__info">
+				<div class="online__course">
+					ОНЛАЙН ВИДЕОКУРС
+				</div>
+				<h2 class="h2">
+					Финансовые рынки — введение
+				</h2>
+				<button class="button">
+					Получить курс бесплатно
+				</button>
+			</div>
+			<div class="introduction__about">
+				<h3 class="h3">
+					Этот видеокурс Вам подходит, если:
+				</h3>
+				<ul class="introduction__list">
+					@@loop('./introduction-item.html', [
+						{'text': 'Вы не удовлетворены своим текущим доходом'},
+						{'text': 'Вы не хотите больше работать на выматывающей работе'},
+						{'text': 'Вы стремитесь улучшить свое финансовое положение'},
+						{'text': 'Вы планируете стать миллионером'},
+						{'text': 'Вы готовы учиться и работать ради будущего'}
+					])
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,75 @@
+.introduction {
+	padding: 182px 0 60px;
+
+	.h2 {
+		text-align: left;
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: 526px;
+	}
+
+	&__about {
+		padding: 80px 80px 80px 85px;
+		background-color: $beige;
+		width: 100%;
+		max-width: 746px;
+		border-radius: $bord8;
+
+		.h3 {
+			color: $text;
+			font-family: $ff;
+			font-size: 28px;
+			font-style: normal;
+			font-weight: $fw-bold;
+			line-height: 120%;
+			margin-bottom: 42px;
+		}
+	}
+
+	&__item {
+		color: #45494B;
+		font-family: $ff;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 120%;
+		margin-bottom: 20px;
+		position: relative;
+		padding-left: 50px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&::before {
+			content: "";
+			width: 26px;
+			height: 26px;
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background-image: url('../img/ico/check.svg');
+			background-repeat: no-repeat;
+		}
+	}
+
+	.online__course {
+		background-color:  rgba(251, 228, 215, 0.70);
+		margin-bottom: 32px;
+	}
+
+	.button {
+		margin-top: auto;
+	}
+}
