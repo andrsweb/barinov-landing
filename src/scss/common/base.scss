@@ -33,6 +33,43 @@ ul {
 	list-style: none
 }
 
+form {
+	padding: 0;
+	margin: 0;
+}
+
+input, fieldset {
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+input {
+	padding: 16px 24px;
+	color: #45494B;
+	font-family: $ff;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: $fw-regular;
+	line-height: 120%;
+	border-radius: $bord8;
+	border: 1px solid var(--2, #F0F0F0);
+	transition: border ease $tr;
+
+	&::placeholder {
+		color: #45494B;
+		font-family: $ff;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 120%;
+	}
+
+	&:focus {
+		border: 1px solid $text
+	}
+}
+
 .wrapper {
 	position: relative;
 	display: flex;

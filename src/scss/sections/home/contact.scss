@@ -1,0 +1,86 @@
+.contact {
+	padding: 50px 0 0;
+
+	@media all and (min-width: $xl) {
+		padding: 70px 0 0;
+	}
+
+	.container {
+		@media all and (min-width: $md) {
+			padding: 0 36px;
+		}
+
+		@media all and (min-width: $xl) {
+			padding: 0 20px;
+		}
+	}
+
+	.h2 {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+
+	&__subtitle {
+		color: #45494B;
+
+		font-family: Onest;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 120%;
+	}
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+		background-color: $peach;
+		padding: 100px 80px;
+		border-radius: $bord8;
+	}
+
+	&__info {
+		max-width: 556px;
+	}
+
+	&__form {
+		max-width: 446px;
+	}
+
+	.online__course {
+		width: 281px;
+		margin-bottom: 32px;
+	}
+
+	fieldset {
+		display: flex;
+		flex-direction: column;
+	}
+
+	input {
+		margin-bottom: 24px;
+
+		&:last-child {
+			margin-bottom: 32px;
+		}
+	}
+
+	.privacy__policy {
+		color: #696E72;
+		font-family: $ff;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: 120%;
+	}
+
+	&__link {
+		display: inline;
+		color: #696E72;
+		text-decoration: underline;
+	}
+
+	.button {
+		width: 100%;
+		margin-top: 12px;
+	}
+}
