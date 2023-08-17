@@ -5,10 +5,11 @@ import { setTargetElement, getTargetElement } from './common/global'
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
-	showPopup('.confirm-popup', '.call-popup', '#load-lock')
+	showPopup('.load-popup', '.call-popup', '#load-lock')
+	showPopup('.confirm-popup', undefined, '#confirm-lock')
 })
 
-const showPopup = (selector, btn, lock) => {
+export const showPopup = (selector, btn, lock) => {
 	const popupWrapper = document.querySelector(selector)
 	const popButtons = document.querySelectorAll(btn)
 	const closeButtons = document.querySelectorAll('.popup-close')

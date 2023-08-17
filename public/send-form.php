@@ -71,58 +71,17 @@ if (!empty($_POST) && isset($_POST['func'])) {
 
 function as_send_load_form()
 {
-	$name		= isset($_POST['popup-name']) ? as_clean_value($_POST['popup-name']) : null;
-	$tel		= isset($_POST['popup-tel']) ? as_clean_value($_POST['popup-tel']) : null;
-	$title		= 'Fast message';
+	$name		= isset($_POST['load-name']) ? as_clean_value($_POST['load-name']) : null;
+	$tel		= isset($_POST['load-tel']) ? as_clean_value($_POST['load-tel']) : null;
+	$email		= isset($_POST['load-email']) ? as_clean_value($_POST['load-email']) : null;
+	$title		= 'From load popup';
 
-	// Required fields.
-	if (!$name || !$tel) {
-		echo json_encode([
-			'success'	=> 0,
-			'message'	=> 'Please complete all fields.'
-		]);
-		die();
-	}
-
-	// Only letters & spaces in name.
-	if (!as_check_name($name)) {
-		echo json_encode([
-			'success'	=> 0,
-			'message'	=> 'Please enter correct name.'
-		]);
-		die();
-	}
-
-	// Check length to avoid very large text.
-	if (!as_check_length($name, 1, 50)) {
-		echo json_encode([
-			'success'	=> 0,
-			'message'	=> 'The name must not exceed 50 characters'
-		]);
-		die();
-	}
-
-	if (!as_check_length($tel, 3, 30)) {
-		echo json_encode([
-			'success'	=> 0,
-			'message'	=> 'The phone number must not exceed 30 characters or be less than 3 characters.'
-		]);
-		die();
-	}
-
-	// Check phone symbols.
-	if (!as_check_phone($tel)) {
-		echo json_encode([
-			'success'	=> 0,
-			'message'	=> 'Please enter correct phone number'
-		]);
-		die();
-	}
 
 	// Prepare message for mail.
 	$message = "Hello!\n" .
 		"{$title}:\n\n" .
 		"Name - $name\n" .
+		"Email - $email\n" .
 		"Phone - $tel \n\n\n";
 
 	as_send_email($title, $message);
@@ -130,59 +89,14 @@ function as_send_load_form()
 
 function as_send_confirm_form()
 {
-	$name		= isset($_POST['popup-name']) ? as_clean_value($_POST['popup-name']) : null;
-	$tel		= isset($_POST['popup-tel']) ? as_clean_value($_POST['popup-tel']) : null;
-	$title		= 'Fast message';
+	$name		= isset($_POST['confirm-name']) ? as_clean_value($_POST['confirm-name']) : null;
+	$title		= 'Confirm code';
 
-	// Required fields.
-	if (!$name || !$tel) {
-		echo json_encode([
-			'success'	=> 0,
-			'message'	=> 'Please complete all fields.'
-		]);
-		die();
-	}
-
-	// Only letters & spaces in name.
-	if (!as_check_name($name)) {
-		echo json_encode([
-			'success'	=> 0,
-			'message'	=> 'Please enter correct name.'
-		]);
-		die();
-	}
-
-	// Check length to avoid very large text.
-	if (!as_check_length($name, 1, 50)) {
-		echo json_encode([
-			'success'	=> 0,
-			'message'	=> 'The name must not exceed 50 characters'
-		]);
-		die();
-	}
-
-	if (!as_check_length($tel, 3, 30)) {
-		echo json_encode([
-			'success'	=> 0,
-			'message'	=> 'The phone number must not exceed 30 characters or be less than 3 characters.'
-		]);
-		die();
-	}
-
-	// Check phone symbols.
-	if (!as_check_phone($tel)) {
-		echo json_encode([
-			'success'	=> 0,
-			'message'	=> 'Please enter correct phone number'
-		]);
-		die();
-	}
 
 	// Prepare message for mail.
 	$message = "Hello!\n" .
 		"{$title}:\n\n" .
-		"Name - $name\n" .
-		"Phone - $tel \n\n\n";
+		"Code - $name\n\n\n";
 
 	as_send_email($title, $message);
 }
@@ -190,9 +104,9 @@ function as_send_confirm_form()
 
 function as_send_main_form()
 {
-	$name	= isset($_POST['name']) ? as_clean_value($_POST['name']) : null;
-	$email	= isset($_POST['email']) ? as_clean_value($_POST['email']) : null;
-	$text	= isset($_POST['text']) ? as_clean_value($_POST['text']) : null;
+	$name	= isset($_POST['main-name']) ? as_clean_value($_POST['main-name']) : null;
+	$email	= isset($_POST['main-email']) ? as_clean_value($_POST['main-email']) : null;
+	$tel	= isset($_POST['main-tel']) ? as_clean_value($_POST['main-tel']) : null;
 	$title	= 'Contacts form';
 
 
@@ -201,7 +115,7 @@ function as_send_main_form()
 		"{$title}:\n\n" .
 		"Name - $name\n" .
 		"Email - $email\n" .
-		"Message - $text \n\n\n";
+		"Phone - $tel \n\n\n";
 	as_send_email($title, $message);
 }
 
