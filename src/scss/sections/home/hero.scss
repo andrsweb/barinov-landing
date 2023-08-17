@@ -165,6 +165,26 @@
 			margin: 0 0 32px 0;
 		}
 	}
+
+	&__text {
+		color: #45494B;
+		font-family: $ff;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $ff;
+		line-height: 120%;
+		margin-bottom: 10px;
+		text-align: center;
+		width: 100%;
+		padding: 0 10px;
+
+		@media all and (min-width: $md) {
+			text-align: left;
+			max-width: 416px;
+			font-size: 18px;
+			padding: 0;
+		}
+	}
 }
 
 .online__course {
@@ -191,4 +211,22 @@
 		font-size: 16px;
 		padding: 13px 24px;
 	}
+}
+
+.thank-you {
+	.h1 {
+		padding: 0 5px;
+		font-size: 36px;
+		word-wrap: break-word;
+
+		@media all and (min-width: $sm) {
+			font-size: 40px;
+			padding: 0;
+		}
+
+		@media all and (min-width: $md) {
+			font-size: 64px;
+		}
+	}
+	
 }
