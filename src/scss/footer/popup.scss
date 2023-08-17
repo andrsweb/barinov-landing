@@ -76,6 +76,25 @@
 			max-width: 496px;
 		}
 
+		&__text {
+			color:#45494B;
+			font-family: $ff;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: $fw-regular;
+			line-height: 120%;
+			margin-bottom: 24px;
+
+			@media all and (min-width: $md) {
+				font-size: 18px;
+				margin-bottom: 40px;
+			}
+	
+			span {
+				font-weight: $fw-bold;
+			}
+		}
+
 		&__title {
 			color: $text;
 			font-family: $ff;
@@ -92,9 +111,32 @@
 				margin-bottom: 40px;
 			}
 		}
+
+		.change__nubmer {
+			color:#45494B;
+			font-family: $ff;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: $fw-regular;
+			line-height: 120%;
+			cursor: pointer;
+			transition: opacity ease $tr;
+			text-align: center;
+			margin-top: 20px;
+
+			&:hover {
+				opacity: $op;
+			}
+
+			@media all and (min-width: $md) {
+				font-size: 18px;
+			}
+		}
 	}
 
 	form {
+		width: 100%;
+
 		input {
 			padding: 16px 24px;
 			margin-bottom: 12px;
