@@ -52,7 +52,7 @@ const toogleBurgerMenu = () => {
 }
 
 const closeMenuByTapLink = () => {
-	const links = document.querySelectorAll('.item__link')
+	const links = document.querySelectorAll('.list__link')
 	const headerWrapper = document.querySelector('.header__wrapper')
 
 	if (!links.length && !headerWrapper) return
